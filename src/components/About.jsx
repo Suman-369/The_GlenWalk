@@ -15,6 +15,7 @@ useGSAP(()=>{
         scrollTrigger:{
             trigger:"#about",
             start:"top center",
+            scroller: '[data-scroll-container]'
         }
     })
 

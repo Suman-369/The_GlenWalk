@@ -3,6 +3,7 @@ import { SplitText } from 'gsap/all'
 import gsap from 'gsap'
 import React, { useRef } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Hero = () => {
 
@@ -47,7 +48,8 @@ useGSAP(()=>{
         trigger:"#hero",
         start:'top top',
         end:'bottom top',
-        scrub:true
+        scrub:true,
+        scroller: '[data-scroll-container]'
     }
    })
    .to('.right-leaf',{y:200},0)
@@ -64,6 +66,7 @@ useGSAP(()=>{
        end: endValue,
        scrub: true,
        pin: true,
+       scroller: '[data-scroll-container]'
     },
    });
    
@@ -73,6 +76,10 @@ useGSAP(()=>{
     });
    };
 
+    return () => {
+      // Kill all triggers for this component on unmount
+      gsap.utils.toArray(ScrollTrigger.getAll()).forEach(trigger => trigger.kill());
+    };
 },[])
   return (
     <>

@@ -82,23 +82,22 @@ main {
 }
 
 .g-letter {
-  position: relative;
-  display: inline-block;
-}
-.the-hanging {
-  position: absolute;
-  top: -0.7em;
-  left: -0.5em;
-  font-size: 0.38em;
-  transform: rotate(-35deg);
-  font-weight: bold;
-  letter-spacing: 0.03em;
-  color: #fff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  pointer-events: none;
-  user-select: none;
-}
-
+    position: relative;
+    display: inline-block;
+  }
+  .the-hanging {
+    position: absolute;
+    top: -0.7em;
+    left: -0.5em;
+    font-size: 0.38em;
+    transform: rotate(-35deg);
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    pointer-events: none;
+    user-select: none;
+  }
 @layer components {
     main {
         @apply w-full overflow-x-hidden;
@@ -129,10 +128,10 @@ main {
     }
 
     #hero {
-        @apply relative z-10 min-h-dvh w-full border border-transparent;
+        @apply relative z-10 min-h-dvh w-full border border-transparent pt-20;
 
         h1 {
-            @apply md:mt-32 mt-40 text-7xl md:text-[15vw] leading-none text-center font-modern-negra;
+            @apply md:mt-20 mt-24 text-7xl md:text-[15vw] leading-none text-center font-modern-negra;
         }
 
         .left-leaf {
@@ -316,7 +315,7 @@ main {
 
 
     #menu {
-        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
+        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient pt-20;
 
         #m-left-leaf {
             @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
@@ -359,7 +358,7 @@ main {
         }
 
         .recipe {
-            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
+            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0 pb-20;
 
             .info {
                 @apply space-y-4 lg:translate-y-20;

@@ -17,7 +17,8 @@ useGSAP(() => {
             trigger: "#cocktails", 
             start: 'top 30%',
             end: 'bottom 80%',
-            scrub: true
+            scrub: true,
+            scroller: '[data-scroll-container]'
         }
     });
 
@@ -39,7 +40,8 @@ useGSAP(() => {
         scrollTrigger: {
             trigger: ".popular ul",
             start: "top 80%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none none",
+            scroller: '[data-scroll-container]'
         }
     });
 
@@ -53,7 +55,8 @@ useGSAP(() => {
         scrollTrigger: {
             trigger: ".loved ul",
             start: "top 80%",
-            toggleActions: "play none none none"
+            toggleActions: "play none none none",
+            scroller: '[data-scroll-container]'
         }
     });
 

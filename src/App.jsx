@@ -7,22 +7,27 @@ import About from "./components/About"
 import Art from "./components/Art"
 import Menu from "./components/Menu"
 import Contact from "./components/Contact"
-import ScrollWrapper from "./ScrollWrapper";
+import ScrollWrapper from "./ScrollWrapper"
+
 
 gsap.registerPlugin(ScrollTrigger,SplitText)
 
 const App = () => {
   return (
-   <main>
-    <Navbar></Navbar>
-    <Hero></Hero>
-    <Coctails></Coctails>
-    <About></About>
-    <Art></Art>
-    <Menu></Menu>
-    <Contact></Contact>
-   </main>
+    <>
+      <Navbar />
+      <ScrollWrapper>
+        <main>
+          <section data-scroll-section><Hero /></section>
+          <section data-scroll-section><Coctails /></section>
+          <section data-scroll-section><About /></section>
+          <section data-scroll-section><Art /></section>
+          <section data-scroll-section><Menu /></section>
+          <section data-scroll-section><Contact /></section>
+        </main>
+      </ScrollWrapper>
+    </>
   )
 }
-
 export default App
+
