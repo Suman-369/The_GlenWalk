@@ -418,3 +418,15 @@ main {
         }
     }
 }
+
+.text-3d {
+  color: #fff;
+  text-shadow:
+    1px 1px 0 #bdbdbd,
+    2px 2px 0 #a0a0a0,
+    3px 3px 0 #7e7e7e,
+    4px 4px 0 #5c5c5c,
+    5px 5px 10px #000;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
