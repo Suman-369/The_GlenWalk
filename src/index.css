@@ -15,34 +15,12 @@
     --font-serif: "DM Serif Text", serif;
 }
 
-html, body {
+html,
+body {
     width: 100%;
-    min-height: 100%;
     background-color: black;
     color: white;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-
-body::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
-
-body {
-    scrollbar-width: none;
-}
-
-main {
-    width: 100vw;
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -81,23 +59,6 @@ main {
     mask-size: 50%;
 }
 
-.g-letter {
-    position: relative;
-    display: inline-block;
-  }
-  .the-hanging {
-    position: absolute;
-    top: -0.7em;
-    left: -0.5em;
-    font-size: 0.38em;
-    transform: rotate(-35deg);
-    font-weight: bold;
-    letter-spacing: 0.03em;
-    color: #fff;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    pointer-events: none;
-    user-select: none;
-  }
 @layer components {
     main {
         @apply w-full overflow-x-hidden;
@@ -128,10 +89,10 @@ main {
     }
 
     #hero {
-        @apply relative z-10 min-h-dvh w-full border border-transparent pt-20;
+        @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-20 mt-24 text-7xl md:text-[15vw] leading-none text-center font-modern-negra;
+            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
         }
 
         .left-leaf {
@@ -164,7 +125,7 @@ main {
                     }
 
                     a {
-                        @apply font-semibold opacity-80 2xl:text-start text-center text-yellow hover:text-white;
+                        @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
                     }
                 }
             }
@@ -291,7 +252,7 @@ main {
         }
 
         .cocktail-img {
-            @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden mx-auto;
+            @apply md:w-[60vw] w-full h-[50vh] md:h-[70vh] rounded-4xl overflow-hidden absolute top-0 md:top-1/2 md:-translate-y-1/2 left-1/2 -translate-x-1/2;
         }
 
         .masked-container {
@@ -314,7 +275,7 @@ main {
     }
 
     #menu {
-        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient pt-20;
+        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
 
         #m-left-leaf {
             @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
@@ -357,7 +318,7 @@ main {
         }
 
         .recipe {
-            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0 pb-20;
+            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
 
             .info {
                 @apply space-y-4 lg:translate-y-20;
@@ -412,16 +373,4 @@ main {
             @apply absolute bottom-0 right-0 lg:w-96 w-1/3 pointer-events-none;
         }
     }
-}
-
-.text-3d {
-  color: #fff;
-  text-shadow:
-    1px 1px 0 #bdbdbd,
-    2px 2px 0 #a0a0a0,
-    3px 3px 0 #7e7e7e,
-    4px 4px 0 #5c5c5c,
-    5px 5px 10px #000;
-  font-weight: bold;
-  letter-spacing: 0.03em;
 }
