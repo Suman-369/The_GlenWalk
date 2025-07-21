@@ -280,7 +280,7 @@ main {
     }
 
     #art {
-        @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
+        @apply flex-center flex-col min-h-dvh p-5 pt-32 md:pt-20 mt-20 relative radial-gradient;
 
         h2 {
             @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
@@ -311,6 +311,10 @@ main {
                 }
             }
         }
+    }
+
+    #art.scrolled {
+        @apply pt-48 md:pt-32;
     }
 
 

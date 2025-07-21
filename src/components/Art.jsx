@@ -2,10 +2,12 @@ import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive'
 import { useGSAP } from '@gsap/react'
 import { featureLists, goodLists } from '../../constants/index.js'
+import React, { useEffect, useState } from 'react';
 
 const Art = () => {
  const isMobile = useMediaQuery({ maxWidth: 767 });
- 
+ const [scrolled, setScrolled] = useState(false);
+
  useGSAP(() => {
 	const start = isMobile ? 'top 20%' : 'top top';
 	
@@ -25,9 +27,21 @@ const Art = () => {
 	 .to('.masked-img', { scale: 1.3, maskPosition: 'center', maskSize: '400%', duration: 1, ease: 'power1.inOut '})
 	 .to('#masked-content', { opacity: 1, duration: 1, ease: 'power1.inOut'})
  })
+
+ useEffect(() => {
+   const handleScroll = () => {
+     const artSection = document.getElementById('art');
+     if (artSection) {
+       const rect = artSection.getBoundingClientRect();
+       setScrolled(rect.top <= 0);
+     }
+   };
+   window.addEventListener('scroll', handleScroll);
+   return () => window.removeEventListener('scroll', handleScroll);
+ }, []);
  
  return (
-	<div id="art">
+	<div id="art" className={scrolled ? 'scrolled' : ''}>
 	 <div className="container mx-auto h-full pt-18">
 		<h2 className="will-fade">The ART</h2>
 		
