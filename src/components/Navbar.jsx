@@ -24,8 +24,8 @@ useGSAP(()=>{
     <nav>
         <div>
             <a href="#home" className='flex items-center gap-2'>
-                <img src="/images/logo.png" alt="logo" />
-                <p>The Glenwalk</p>
+                <img src="/images/logo.avif" alt="logo" className="w-40 h-15" />
+               
             </a>
 
             <ul>
