@@ -84,7 +84,7 @@ useGSAP(()=>{
   return (
     <>
     <section id="hero" className="noisy">
-        <h1>
+        <h1 className='title'>
           <span className="g-letter">
             <span className="the-hanging">THE</span>
             G
